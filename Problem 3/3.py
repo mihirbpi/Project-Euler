@@ -20,12 +20,12 @@ def is_prime(number):
         return True
 
 
-for number in range(2, 600851475143 + 1):
+for number in range(1, 600851475143 + 1):
 
-    if(600851475143 % number == 0):
+    quotient, remainder = divmod(600851475143, number)
 
-        to_check = int(600851475143/number)
+    if(remainder == 0):
 
-        if(is_prime(to_check)):
-            print(to_check)
+        if(is_prime(quotient)):
+            print(quotient)
             break
